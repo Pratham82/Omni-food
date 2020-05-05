@@ -7,13 +7,14 @@
     box-sizing: border-box;
 }
 
-html{
+body,html{
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif ;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 .clearfix{zoom:1}
@@ -218,6 +219,16 @@ header{
     margin-top: 20px;
 }
 
+.logo-black{
+    display: none;
+    height:50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main navigation*/
+
 .main-nav{
     float: right; 
     list-style: none;
@@ -245,6 +256,42 @@ header{
     border-bottom: 2px solid #e67e22;
 }
 
+/* Sticky navigation*/
+
+.sticky{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 2px #efefef ;
+    z-index: 9999;
+}
+
+.sticky .main-nav{
+    margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;    
+}
+.sticky .logo{display: none;}
+.sticky .logo-black{display: block;}
+
+
+/*Mobile navigation*/
+.mobile-nav-icon{
+    float: right;
+    margin-top: 15px;
+    cursor:pointer;
+    display:none;
+}
+.mobile-nav-icon i{
+    font-size: 200%;
+    color: #fff;
+}
 /*-----------------------------------------------*/
 /*--------------------/FEATURES/-------------------*/
 /*-----------------------------------------------*/
@@ -572,4 +619,24 @@ footer p{
     text-align: center;
     font-size: 90%;
     margin-top: 20px;
+}
+
+/*-----------------------------------------------*/
+/*--------------------/ANIMATIONS/-------------------*/
+/*-----------------------------------------------*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity:0;
+    animation-duration: 1s;
+}
+
+.js--wp-4{
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
+    opacity: 1;
 }
